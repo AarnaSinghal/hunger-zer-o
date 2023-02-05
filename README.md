@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Our platform HUNGER ZER-O provides an easy and convenient way for people to donate food to the food banks. With just a few taps, you can create a food donation event and have the food collected by a food bank near you. Our goal is to reduce food waste and carbon footprint and help feed those in need. We are committed to making a positive impact in our communities and welcome all food banks and donors to join us in this mission.
+
 ## Getting Started
 
 First, run the development server:
