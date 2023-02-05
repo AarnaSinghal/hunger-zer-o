@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderReg from '@/components/regBanner'
+import HeaderReg from '/components/regBanner'
 
 const DonorRegistration = () => {
   return (
