@@ -2,8 +2,8 @@ import Image from 'next/image'
 import React,{useState} from 'react'
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import CarouselCard from '@/components/cards/carouselCard';
-import EventSection from '@/components/events';
+import CarouselCard from '/components/cards/carouselCard';
+import EventSection from '/components/events';
 import { useRouter } from 'next/router';
 const Donor = () => {
     let router=useRouter();
