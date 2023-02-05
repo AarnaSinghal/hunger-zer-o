@@ -1,9 +1,12 @@
 import React from 'react'
-import { HeaderReg } from '@/components/HeaderReg'
+import HeaderReg from '@/components/regBanner'
 
-export const donorRegistration = () => {
+const DonorRegistration = () => {
   return (
-    <div>
-    </div>
+   <>
+   <HeaderReg/>
+   </>
   )
 }
+
+export default DonorRegistration
