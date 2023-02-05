@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useState } from 'react'
 
 const CreateEvent = () => {
     let router=useRouter();
+    const [show,setShow]=useState(false)
   return (
     <>
     <section className='p-4 font-primary flex flex-col gap-4'>
@@ -40,10 +41,26 @@ const CreateEvent = () => {
             <div className='text-lg font-medium'>Choose Date n Time</div>
             <input type={'datetime-local'} className='p-2 w-full outline-none border-[1px] border-gray-200 rounded text-lg focus:ring-white bg-gray-100' />
         </div>
-        <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded text-base px-5 py-2.5 text-center mr-2 mb-2">Create Event</button>
+        <button onClick={()=>setShow(true)} type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded text-base px-5 py-2.5 text-center mr-2 mb-2">Create Event</button>
 
        </main>
     </section>
+    <main className='absolute top-0 w-screen h-screen  bg-gray-800/50 flex items-center justify-center'>
+        <div className='w-[320px] p-4 bg-white rounded-xl flex flex-col items-center gap-6'>
+            <Image 
+            src={'/images/smile.svg'}
+            width={56}
+            height={56}
+            />
+            <div className='text-3xl text-gray-800 font-semibold text-center font-primary'>
+                Event Created Successfully !
+            </div>
+            <div className='text-base text-gray-800 font-medium text-center font-primary'>
+                Hang tight.. We have sent notification to all the nearby food banks !
+            </div>
+            <button onClick={()=>{router.push(`/donor/${router.query.id}`)}} className='bg-gray-800 p-3 rounded text-white'>Continue to home</button>
+        </div>
+    </main>
     </>
   )
 }
